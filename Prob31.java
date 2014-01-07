@@ -25,7 +25,7 @@ public class Prob31 extends Euler
       int[] ways = new int[TOTAL + 1];
       ways[0] = 1; // "base case"
 
-      for ( int coin: coins )
+      for ( int coin : coins )
          for ( int j = coin; j <= TOTAL; j++ )
             ways[j] += ways[j - coin];
       System.out.println(ways[TOTAL]);
